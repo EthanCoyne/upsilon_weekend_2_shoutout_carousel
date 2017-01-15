@@ -1,6 +1,7 @@
 var i =0;
 var next = i+1;
 var prev = i-1;
+var time = 10;
 
 $(document).ready(function(){
   $.ajax({
@@ -31,19 +32,24 @@ $(document).ready(function(){
         nextButton();
         $('.highlighted').removeClass('highlighted');
         $(this).closest('body').find('#' + i).addClass('highlighted');
+        time = 10;
       });
 
       $('#prev').on('click', function(){
         prevButton();
         $('.highlighted').removeClass('highlighted');
         $(this).closest('body').find('#' + i).addClass('highlighted');
+        time = 10;
       });
 
-      window.setInterval(function(){
+      var timer = setInterval(function(){
+        time--;
+        if (time == 0) {
         nextButton();
         $('.highlighted').removeClass('highlighted');
         $('#person').closest('body').find('#' + i).addClass('highlighted');
-      }, 10000);
+      }
+      }, 1000);
 
 
 
