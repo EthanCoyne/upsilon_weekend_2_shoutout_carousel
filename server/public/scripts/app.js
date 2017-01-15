@@ -49,6 +49,7 @@ $(document).ready(function(){
         nextButton();
         $('.highlighted').removeClass('highlighted');
         $('#person').closest('body').find('#' + i).addClass('highlighted');
+        time = 10;
       }
       }, 1000);
 
@@ -94,7 +95,7 @@ $(document).ready(function(){
       };
 
       function prevButton() {
-        ('#person').fadeOut('slow');
+        $('#person').fadeOut('slow');
         if(i > 0) {
           i = prev;
           var person = data.people[i];
