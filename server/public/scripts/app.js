@@ -26,6 +26,7 @@ $(document).ready(function(){
         var person = data.people[i];
         appendDom(person)
         $(this).addClass('highlighted');
+        time = 10;
       });
 
       $('#next').on('click', function(){
@@ -64,13 +65,18 @@ $(document).ready(function(){
 
 
       function appendDom(person){
-        $('#name').text(person.name);
-        $('#githubUserName').text(person.githubUserName);
-        $('#shoutout').text(person.shoutout);
+        var fade = setTimeout (function(){
+          $('#name').text(person.name);
+          $('#githubUserName').text(person.githubUserName);
+          $('#shoutout').text(person.shoutout);
+        }, 500);
+        $('#person').fadeIn('slow');
+
       };
 
 
       function nextButton() {
+        $('#person').fadeOut('slow');
         if(i < 16 ){
           i = next;
           var person = data.people[i];
@@ -88,6 +94,7 @@ $(document).ready(function(){
       };
 
       function prevButton() {
+        ('#person').fadeOut('slow');
         if(i > 0) {
           i = prev;
           var person = data.people[i];
