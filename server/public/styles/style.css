@@ -1,7 +1,18 @@
 button {
   text-decoration: underline;
+  margin-top: 20px;
 
 }
 .highlighted {
   background-color: tomato;
+}
+
+#person {
+  /*background-image: url(http://wallpapercave.com/wp/dF53LEj.png);
+  text-decoration-color: white;*/
+}
+
+.attr {
+
+
 }
