@@ -19,6 +19,7 @@ $(document).ready(function(){
 
       // clicking anywhere on the carousel displays the corresponding person in the list
       $('.carousel').on('click', function(){
+        $('#person').fadeOut('fast');
         $('.highlighted').removeClass('highlighted');
         i = Number($(this).attr('id'));
         next = i+1;
