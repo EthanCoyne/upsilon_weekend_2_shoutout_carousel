@@ -47,6 +47,7 @@ $(document).ready(function(){
       });
 
       // This timer moves to the next person if no action is taken every 10 seconds.
+      // when time reaches 0, time is reset to 10.
       var timer = setInterval(function(){
         time--;
         if (time == 0) {
